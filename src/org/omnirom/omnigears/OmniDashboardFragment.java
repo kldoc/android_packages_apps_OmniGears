@@ -21,7 +21,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 import android.provider.SearchIndexableResource;
 
 import com.android.internal.logging.nano.MetricsProto;

@@ -27,10 +27,10 @@ import android.text.TextUtils;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.PreferenceCategory;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceCategory;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
@@ -78,8 +78,8 @@ public class BarsSettings extends SettingsPreferenceFragment implements
 
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
-        int quickPulldownValue = Settings.System.getInt(getContentResolver(),
-                Settings.System.OMNI_STATUS_BAR_QUICK_QS_PULLDOWN, 0);
+        int quickPulldownValue = 0; //Settings.System.getInt(getContentResolver(),
+                //Settings.System.OMNI_STATUS_BAR_QUICK_QS_PULLDOWN, 0);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updatePulldownSummary(quickPulldownValue);
 
@@ -91,13 +91,13 @@ public class BarsSettings extends SettingsPreferenceFragment implements
 
         final PreferenceCategory aspectRatioCategory =
                 (PreferenceCategory) getPreferenceScreen().findPreference(KEY_ASPECT_RATIO_CATEGORY);
-        final boolean supportMaxAspectRatio = getResources().getBoolean(com.android.internal.R.bool.config_haveHigherAspectRatioScreen);
+        final boolean supportMaxAspectRatio = false; //getResources().getBoolean(com.android.internal.R.bool.config_haveHigherAspectRatioScreen);
         if (!supportMaxAspectRatio) {
             getPreferenceScreen().removePreference(aspectRatioCategory);
         } else {
             mAspectRatioAppsSelect = (AppMultiSelectListPreference) findPreference(KEY_ASPECT_RATIO_APPS_LIST);
             mAspectRatioApps = (ScrollAppsViewPreference) findPreference(KEY_ASPECT_RATIO_APPS_LIST_SCROLLER);
-            final String valuesString = Settings.System.getString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST);
+            final String valuesString = ""; //Settings.System.getString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST);
             List<String> valuesList = new ArrayList<String>();
             if (!TextUtils.isEmpty(valuesString)) {
                 valuesList.addAll(Arrays.asList(valuesString.split(":")));
@@ -135,20 +135,20 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
          if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
-            Settings.System.putInt(getContentResolver(), Settings.System.OMNI_STATUS_BAR_QUICK_QS_PULLDOWN,
-                    quickPulldownValue);
+            //Settings.System.putInt(getContentResolver(), Settings.System.OMNI_STATUS_BAR_QUICK_QS_PULLDOWN,
+            //        quickPulldownValue);
             updatePulldownSummary(quickPulldownValue);
             return true;
         } else if (preference == mAspectRatioAppsSelect) {
             Collection<String> valueList = (Collection<String>) newValue;
             mAspectRatioApps.setVisible(false);
             if (valueList != null) {
-                Settings.System.putString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST,
-                        TextUtils.join(":", valueList));
+                //Settings.System.putString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST,
+                //        TextUtils.join(":", valueList));
                 mAspectRatioApps.setVisible(true);
                 mAspectRatioApps.setValues(valueList);
             } else {
-                Settings.System.putString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST, "");
+                //Settings.System.putString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST, "");
             }
             return true;
         } else if (preference == mQsPanelAlpha) {

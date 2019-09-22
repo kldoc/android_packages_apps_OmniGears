@@ -23,13 +23,13 @@ import android.content.res.Resources;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.ListPreference;
-import android.support.v14.preference.SwitchPreference;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.ListPreference;
+import androidx.preference.SwitchPreference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 
@@ -81,8 +81,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         final PreferenceScreen prefScreen = getPreferenceScreen();
         final int deviceKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
-        final boolean buttonLights = getResources().getBoolean(
-                com.android.internal.R.bool.config_button_brightness_support);
+        final boolean buttonLights = false; //getResources().getBoolean(
+                //com.android.internal.R.bool.config_button_brightness_support);
         final PreferenceCategory keysCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_KEYS);
         final PreferenceCategory otherCategory =

@@ -18,12 +18,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/header_category_omni">
 
-    <Preference
+    <!--<Preference
         android:key="style_settings"
         android:title="@string/style_settings_title"
         android:summary="@string/style_settings_summary"
         android:icon="@drawable/ic_settings_style"
-        android:fragment="org.omnirom.omnigears.interfacesettings.StyleSettings" />
+        android:fragment="org.omnirom.omnigears.interfacesettings.StyleSettings" />-->
 
     <Preference
         android:key="device_parts"
@@ -48,12 +48,6 @@
         android:title="@string/lockscreen_category_title"
         android:icon="@drawable/ic_lockscreen_tile"
         android:fragment="org.omnirom.omnigears.interfacesettings.LockscreenItemSettings" />
-
-    <Preference
-        android:key="gesture_settings"
-        android:icon="@drawable/ic_settings_gestures_omni"
-        android:title="@string/gesture_settings_title"
-        android:fragment="org.omnirom.omnigears.GestureSettings" />
 
     <Preference
         android:key="led_settings"

@@ -20,7 +20,7 @@ import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 import android.provider.SearchIndexableResource;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;

@@ -38,12 +38,12 @@ import android.util.Log;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v14.preference.SwitchPreference;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.SwitchPreference;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
@@ -78,16 +78,17 @@ public class FingerprintSettings extends SettingsPreferenceFragment implements
         mFilePicker = (Preference) findPreference(FINGERPRINT_CUSTOM_ICON);
 
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
-        mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.OMNI_FINGERPRINT_SUCCESS_VIB, 1) == 1));
+        //mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
+        //        Settings.System.OMNI_FINGERPRINT_SUCCESS_VIB, 1) == 1));
+        mFingerprintVib.setChecked(true);
         mFingerprintVib.setOnPreferenceChangeListener(this);
 
-        boolean isFODDevice = getResources().getBoolean(com.android.internal.R.bool.config_needCustomFODView);
+        boolean isFODDevice = false; //getResources().getBoolean(com.android.internal.R.bool.config_needCustomFODView);
         if (!isFODDevice){
             removePreference(FINGERPRINT_CATEGORY);
         } else {
-            final String customIconURI = Settings.System.getString(getContext().getContentResolver(),
-                Settings.System.OMNI_CUSTOM_FP_ICON);
+            final String customIconURI = ""; //Settings.System.getString(getContext().getContentResolver(),
+                //Settings.System.OMNI_CUSTOM_FP_ICON);
 
             if (!TextUtils.isEmpty(customIconURI)) {
                 setPickerIcon(customIconURI);
@@ -117,21 +118,21 @@ public class FingerprintSettings extends SettingsPreferenceFragment implements
                 uri = resultData.getData();
                 mFilePicker.setSummary(uri.toString());
                 setPickerIcon(uri.toString());
-                Settings.System.putString(getContentResolver(), Settings.System.OMNI_CUSTOM_FP_ICON,
-                    uri.toString());
+                //Settings.System.putString(getContentResolver(), Settings.System.OMNI_CUSTOM_FP_ICON,
+                 //   uri.toString());
             }
         } else if (requestCode == GET_CUSTOM_FP_ICON && resultCode == Activity.RESULT_CANCELED) {
             mFilePicker.setSummary("");
             mFilePicker.setIcon(new ColorDrawable(Color.TRANSPARENT));
-            Settings.System.putString(getContentResolver(), Settings.System.OMNI_CUSTOM_FP_ICON, "");
+            //Settings.System.putString(getContentResolver(), Settings.System.OMNI_CUSTOM_FP_ICON, "");
         }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mFingerprintVib) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.OMNI_FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
+            //Settings.System.putInt(getActivity().getContentResolver(),
+            //        Settings.System.OMNI_FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
             return true;
         }
         return false;
