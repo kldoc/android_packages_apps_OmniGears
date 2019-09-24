@@ -91,13 +91,13 @@ public class BarsSettings extends SettingsPreferenceFragment implements
 
         final PreferenceCategory aspectRatioCategory =
                 (PreferenceCategory) getPreferenceScreen().findPreference(KEY_ASPECT_RATIO_CATEGORY);
-        final boolean supportMaxAspectRatio = false; //getResources().getBoolean(com.android.internal.R.bool.config_haveHigherAspectRatioScreen);
+        final boolean supportMaxAspectRatio = getResources().getBoolean(com.android.internal.R.bool.config_haveHigherAspectRatioScreen);
         if (!supportMaxAspectRatio) {
             getPreferenceScreen().removePreference(aspectRatioCategory);
         } else {
             mAspectRatioAppsSelect = (AppMultiSelectListPreference) findPreference(KEY_ASPECT_RATIO_APPS_LIST);
             mAspectRatioApps = (ScrollAppsViewPreference) findPreference(KEY_ASPECT_RATIO_APPS_LIST_SCROLLER);
-            final String valuesString = ""; //Settings.System.getString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST);
+            final String valuesString = Settings.System.getString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST);
             List<String> valuesList = new ArrayList<String>();
             if (!TextUtils.isEmpty(valuesString)) {
                 valuesList.addAll(Arrays.asList(valuesString.split(":")));
@@ -143,12 +143,12 @@ public class BarsSettings extends SettingsPreferenceFragment implements
             Collection<String> valueList = (Collection<String>) newValue;
             mAspectRatioApps.setVisible(false);
             if (valueList != null) {
-                //Settings.System.putString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST,
-                //        TextUtils.join(":", valueList));
+                Settings.System.putString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST,
+                        TextUtils.join(":", valueList));
                 mAspectRatioApps.setVisible(true);
                 mAspectRatioApps.setValues(valueList);
             } else {
-                //Settings.System.putString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST, "");
+                Settings.System.putString(getContentResolver(), Settings.System.OMNI_ASPECT_RATIO_APPS_LIST, "");
             }
             return true;
         } else if (preference == mQsPanelAlpha) {
