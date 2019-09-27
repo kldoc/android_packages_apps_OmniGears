@@ -20,22 +20,6 @@
     android:title="@string/more_settings_title">
 
         <PreferenceCategory
-            android:key="category_other"
-            android:title="@string/other_category">
-
-            <SwitchPreference
-                android:key="show_dashboard_columns"
-                android:title="@string/show_dashboard_columns_title"
-                android:summary="@string/show_dashboard_columns_summary"
-                android:persistent="false" />
-            <SwitchPreference
-                android:key="hide_dashboard_summary"
-                android:title="@string/hide_dashboard_summary_title"
-                android:summary="@string/hide_dashboard_summary_summary"
-                android:persistent="false" />
-
-        </PreferenceCategory>
-        <PreferenceCategory
             android:key="category_system"
             android:title="@string/system_category">
             

@@ -47,10 +47,6 @@ import java.util.ArrayList;
 
 public class MoreSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener, Indexable {
     private static final String TAG = "MoreSettings";
-    private static final String KEY_SHOW_DASHBOARD_COLUMNS = "show_dashboard_columns";
-    private static final String KEY_HIDE_DASHBOARD_SUMMARY = "hide_dashboard_summary";
-
-    private SharedPreferences mAppPreferences;
 
     @Override
     public int getMetricsCategory() {
@@ -61,31 +57,6 @@ public class MoreSettings extends SettingsPreferenceFragment implements OnPrefer
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.more_settings);
-
-        mAppPreferences = getActivity().getSharedPreferences(SettingsActivity.APP_PREFERENCES_NAME,
-                Context.MODE_PRIVATE);
-
-        SwitchPreference showColumnsLayout = (SwitchPreference) findPreference(KEY_SHOW_DASHBOARD_COLUMNS);
-        showColumnsLayout.setChecked(mAppPreferences.getInt(SettingsActivity.KEY_COLUMNS_COUNT, 1) == 2);
-        showColumnsLayout.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                if ((Boolean) newValue ) {
-                    mAppPreferences.edit().putInt(SettingsActivity.KEY_COLUMNS_COUNT, 2).commit();
-                } else {
-                    mAppPreferences.edit().putInt(SettingsActivity.KEY_COLUMNS_COUNT, 1).commit();
-                }
-                return true;
-            }
-        });
-
-        SwitchPreference hideColumnSummary = (SwitchPreference) findPreference(KEY_HIDE_DASHBOARD_SUMMARY);
-        hideColumnSummary.setChecked(mAppPreferences.getBoolean(SettingsActivity.KEY_HIDE_SUMMARY, false));
-        hideColumnSummary.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                mAppPreferences.edit().putBoolean(SettingsActivity.KEY_HIDE_SUMMARY, ((Boolean) newValue)).commit();
-                return true;
-            }
-        });
     }
 
     @Override
