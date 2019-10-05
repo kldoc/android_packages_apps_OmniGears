@@ -16,6 +16,7 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/lockscreen_item_title"
     android:key="lockscreen_item">
 
@@ -48,6 +49,22 @@
         android:title="@string/lockscreen_qs_disabled_title"
         android:summary="@string/lockscreen_qs_disabled_summary"
         android:defaultValue="false" />
+
+    <org.omnirom.omnilib.preference.SeekBarPreference
+        android:key="ambient_doze_brightness"
+        android:title="@string/ambient_doze_brightness_title"
+        android:summary="@string/ambient_doze_brightness_summary"
+        android:max="255"
+        settings:min="1"
+        android:persistent="false" />
+
+    <org.omnirom.omnilib.preference.SeekBarPreference
+        android:key="ambient_pulse_brightness"
+        android:title="@string/ambient_pulse_brightness_title"
+        android:summary="@string/ambient_pulse_brightness_summary"
+        android:max="255"
+        settings:min="1"
+        android:persistent="false" />
 
 </PreferenceScreen>
 

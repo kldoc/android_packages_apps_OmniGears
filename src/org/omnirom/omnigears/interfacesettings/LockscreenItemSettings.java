@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import androidx.preference.Preference;
 import android.provider.SearchIndexableResource;
+import android.provider.Settings;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
@@ -30,6 +31,8 @@ import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
+import org.omnirom.omnilib.preference.SeekBarPreference;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -37,6 +40,11 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
         Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String TAG = "LockscreenItemSettings";
+    private static final String KEY_PULSE_BRIGHTNESS = "ambient_pulse_brightness";
+    private static final String KEY_DOZE_BRIGHTNESS = "ambient_doze_brightness";
+
+    private SeekBarPreference mPulseBrightness;
+    private SeekBarPreference mDozeBrightness;
 
     @Override
     public int getMetricsCategory() {
@@ -47,6 +55,26 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.lockscreenitems);
+
+        int defaultDoze = getResources().getInteger(
+                com.android.internal.R.integer.config_screenBrightnessDoze);
+        int defaultPulse = getResources().getInteger(
+                com.android.internal.R.integer.config_screenBrightnessPulse);
+        if (defaultPulse == -1) {
+            defaultPulse = defaultDoze;
+        }
+
+        mPulseBrightness = (SeekBarPreference) findPreference(KEY_PULSE_BRIGHTNESS);
+        int value = Settings.System.getInt(getContentResolver(),
+                Settings.System.OMNI_PULSE_BRIGHTNESS, defaultPulse);
+        mPulseBrightness.setValue(value);
+        mPulseBrightness.setOnPreferenceChangeListener(this);
+
+        mDozeBrightness = (SeekBarPreference) findPreference(KEY_DOZE_BRIGHTNESS);
+        value = Settings.System.getInt(getContentResolver(),
+                Settings.System.OMNI_DOZE_BRIGHTNESS, defaultDoze);
+        mDozeBrightness.setValue(value);
+        mDozeBrightness.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -56,6 +84,17 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mPulseBrightness) {
+            int value = (Integer) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.OMNI_PULSE_BRIGHTNESS, value);
+            return true;
+        } else if (preference == mDozeBrightness) {
+            int value = (Integer) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.OMNI_DOZE_BRIGHTNESS, value);
+            return true;
+        }
         return true;
     }
 
