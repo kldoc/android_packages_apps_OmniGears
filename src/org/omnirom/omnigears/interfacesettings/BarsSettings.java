@@ -78,8 +78,8 @@ public class BarsSettings extends SettingsPreferenceFragment implements
 
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
-        int quickPulldownValue = 0; //Settings.System.getInt(getContentResolver(),
-                //Settings.System.OMNI_STATUS_BAR_QUICK_QS_PULLDOWN, 0);
+        int quickPulldownValue = Settings.System.getInt(getContentResolver(),
+                Settings.System.OMNI_STATUS_BAR_QUICK_QS_PULLDOWN, 0);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updatePulldownSummary(quickPulldownValue);
 
@@ -135,8 +135,8 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
          if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
-            //Settings.System.putInt(getContentResolver(), Settings.System.OMNI_STATUS_BAR_QUICK_QS_PULLDOWN,
-            //        quickPulldownValue);
+            Settings.System.putInt(getContentResolver(), Settings.System.OMNI_STATUS_BAR_QUICK_QS_PULLDOWN,
+                    quickPulldownValue);
             updatePulldownSummary(quickPulldownValue);
             return true;
         } else if (preference == mAspectRatioAppsSelect) {
