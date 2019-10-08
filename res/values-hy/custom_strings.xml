@@ -18,35 +18,40 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Hardware keys -->
-  <!-- Double tap to sleep -->
-  <!-- Doze pulse (ambient display) options -->
-  <!-- Swap volume buttons when the screen is rotated -->
-  <!-- Battery light settings  -->
-  <!-- Lock screen config -->
-  <!-- Network traffic -->
-  <!-- captive portal - disable connectivity check -->
-  <!-- statusbar brightness -->
-  <!-- Status Bar Activity Indicators -->
-  <!-- Navigationbar settings -->
-  <!-- Enable Tablet Style navigation bar -->
-  <!-- Dashboard columns -->
-  <!-- global acions config -->
-  <!--<string name="screenshot_crop_behavior_title"></string>
+    <!-- Hardware keys -->
+    <!-- Double tap to sleep -->
+    <!-- Doze pulse (ambient display) options -->
+    <!-- Swap volume buttons when the screen is rotated -->
+    <!-- Battery light settings  -->
+    <!-- Lock screen config -->
+    <!-- Network traffic -->
+    <!-- captive portal - connectivity check -->
+    <!-- statusbar brightness -->
+    <!-- Status Bar Activity Indicators -->
+    <!-- Navigationbar settings -->
+    <!-- Enable Tablet Style navigation bar -->
+    <!-- Dashboard columns -->
+    <!-- global acions config -->
+    <!--<string name="screenshot_crop_behavior_title"></string>
     <string name="screenshot_crop_behavior_summary"></string>-->
-  <!-- Notification light dialogs -->
-  <!-- Values for the notification light pulse spinners -->
-  <!-- Lights settings screen, notification light settings -->
-  <!-- Lights settings, LED notification -->
-  <!-- Hostname setting -->
-  <!-- OMS -->
-  <!-- Summaries -->
-  <!-- Display : Rotation -->
-  <!-- Doze settings editor -->
-  <!-- fingerprint authentication vibration -->
-  <!-- Quick Pulldown-->
-  <!-- Expanded desktop -->
-  <!-- Brightness control -->
-  <!-- Bottom shortcuts -->
-  <!-- Hide lockscreen status bar, clock, date, alarm -->
+    <!-- Notification light dialogs -->
+    <!-- Values for the notification light pulse spinners -->
+    <!-- Lights settings screen, notification light settings -->
+    <!-- Lights settings, LED notification -->
+    <!-- Hostname setting -->
+    <!-- OMS -->
+    <!-- Summaries -->
+    <!-- Display : Rotation -->
+    <!-- Doze settings editor -->
+    <!-- fingerprint authentication vibration -->
+    <!-- Quick Pulldown-->
+    <!-- Expanded desktop -->
+    <!-- Brightness control -->
+    <!-- Bottom shortcuts -->
+    <!-- Hide lockscreen status bar, clock, date, alarm -->
+    <!-- QuickSettings Panel Transparency -->
+    <!-- StatusBar -->
+    <!-- Display Manager -->
+    <!-- Dialer Setting -->
+    <!-- Fingerprint -->
 </resources>
