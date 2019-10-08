@@ -18,12 +18,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/header_category_omni">
 
-    <!--<Preference
+   <Preference
         android:key="style_settings"
         android:title="@string/style_settings_title"
         android:summary="@string/style_settings_summary"
         android:icon="@drawable/ic_settings_style"
-        android:fragment="org.omnirom.omnigears.interfacesettings.StyleSettings" />-->
+        android:fragment="org.omnirom.omnigears.interfacesettings.StyleSettings" />
 
     <Preference
         android:key="device_parts"
