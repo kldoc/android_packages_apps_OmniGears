@@ -18,18 +18,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/header_category_omni">
 
-   <Preference
-        android:key="style_settings"
-        android:title="@string/style_settings_title"
-        android:summary="@string/style_settings_summary"
-        android:icon="@drawable/ic_settings_style"
-        android:fragment="org.omnirom.omnigears.interfacesettings.StyleSettings" />
-
     <Preference
         android:key="device_parts"
         android:title="@string/omni_device_parts"
         android:icon="@drawable/ic_settings_omnigears"
         android:fragment="org.omnirom.device.DeviceParts" />
+
+   <Preference
+        android:key="style_settings"
+        android:title="@string/style_settings_title"
+        android:icon="@drawable/ic_settings_style"
+        android:fragment="org.omnirom.omnigears.interfacesettings.StyleSettings" />
 
     <Preference
         android:key="button_settings"
