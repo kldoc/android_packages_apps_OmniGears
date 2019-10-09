@@ -854,4 +854,7 @@
     <!-- doze on charge -->
     <string name="doze_on_charge_title">Show ambient display when charging</string>
     <string name="doze_on_charge_summary">Wake screen when charging</string>
+    <!-- lock screen media blur -->
+    <string name="lockscreen_media_blur_title">Media artwork blur level</string>
+    <string name="lockscreen_media_blur_summary">Control the blur amount of media artwork</string>
 </resources>

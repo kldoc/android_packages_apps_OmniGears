@@ -42,9 +42,11 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
     private static final String TAG = "LockscreenItemSettings";
     private static final String KEY_PULSE_BRIGHTNESS = "ambient_pulse_brightness";
     private static final String KEY_DOZE_BRIGHTNESS = "ambient_doze_brightness";
+    private static final String KEY_LOCKSCREEN_MEDIA_BLUR = "lockscreen_media_blur";
 
     private SeekBarPreference mPulseBrightness;
     private SeekBarPreference mDozeBrightness;
+    private SeekBarPreference mLockscreenMediaBlur;
 
     @Override
     public int getMetricsCategory() {
@@ -56,6 +58,7 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.lockscreenitems);
 
+        int defaultBlur = 25;
         int defaultDoze = getResources().getInteger(
                 com.android.internal.R.integer.config_screenBrightnessDoze);
         int defaultPulse = getResources().getInteger(
@@ -75,6 +78,12 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
                 Settings.System.OMNI_DOZE_BRIGHTNESS, defaultDoze);
         mDozeBrightness.setValue(value);
         mDozeBrightness.setOnPreferenceChangeListener(this);
+
+        mLockscreenMediaBlur = (SeekBarPreference) findPreference(KEY_LOCKSCREEN_MEDIA_BLUR);
+        value = Settings.System.getInt(getContentResolver(),
+                Settings.System.OMNI_LOCKSCREEN_MEDIA_BLUR, defaultBlur);
+        mLockscreenMediaBlur.setValue(value);
+        mLockscreenMediaBlur.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -93,6 +102,11 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
             int value = (Integer) newValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.OMNI_DOZE_BRIGHTNESS, value);
+            return true;
+        } else if (preference == mLockscreenMediaBlur) {
+            int value = (Integer) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.OMNI_LOCKSCREEN_MEDIA_BLUR, value);
             return true;
         }
         return true;

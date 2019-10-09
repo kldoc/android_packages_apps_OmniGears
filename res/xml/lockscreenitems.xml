@@ -73,5 +73,12 @@
         settings:min="1"
         android:persistent="false" />
 
+    <org.omnirom.omnilib.preference.SeekBarPreference
+        android:key="lockscreen_media_blur"
+        android:title="@string/lockscreen_media_blur_title"
+        android:summary="@string/lockscreen_media_blur_summary"
+        android:max="2500"
+        settings:min="1"
+        android:persistent="false" />
 </PreferenceScreen>
 
