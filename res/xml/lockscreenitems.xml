@@ -51,6 +51,12 @@
         android:summary="@string/lockscreen_qs_disabled_summary"
         android:defaultValue="false" />
 
+    <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
+        android:key="doze_on_charge"
+        android:title="@string/doze_on_charge_title"
+        android:summary="@string/doze_on_charge_summary"
+        android:defaultValue="false" />
+
     <org.omnirom.omnilib.preference.SeekBarPreference
         android:key="ambient_doze_brightness"
         android:title="@string/ambient_doze_brightness_title"

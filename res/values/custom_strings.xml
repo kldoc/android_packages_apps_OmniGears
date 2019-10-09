@@ -850,4 +850,8 @@
 
     <string name="ambient_doze_brightness_title">Ambient display brightness</string>
     <string name="ambient_doze_brightness_summary">Set brightness to use during ambient display on</string>
+
+    <!-- doze on charge -->
+    <string name="doze_on_charge_title">Show ambient display when charging</string>
+    <string name="doze_on_charge_summary">Wake screen when charging</string>
 </resources>
