@@ -74,6 +74,7 @@
     <string name="button_home_answers_call_title">Rufannahme mit Home-Taste</string>
     <string name="button_home_answers_call_summary">Drücken der Home-Taste nimmt eingehenden Anruf an</string>
     <string name="button_other_title">Andere</string>
+    <string name="keys_action_app_switch_defaut">Standard</string>
     <string name="keys_action_omniswitch_short">OmniSwitch</string>
     <string name="button_back_kill_enable_title">App beenden Zurück-Taste</string>
     <string name="button_back_kill_enable_summary">Beenden der laufenden Anwendung durch langes Drücken der \"Zurück\"-Taste erzwingen</string>
@@ -263,6 +264,7 @@
     <string name="network_traffic_autohide_threshold">Inaktivitätsschwelle</string>
     <string name="network_traffic_enable_title">Aktiviert</string>
     <!-- captive portal - connectivity check -->
+    <string name="captive_portal_mode_title">Netzwerkverbindungs-Überprüfung</string>
     <!-- statusbar brightness -->
     <string name="status_bar_brightness_control_title">Helligkeitskontrolle</string>
     <string name="status_bar_brightness_control_summary">Helligkeit durch Wischen über die Statusleiste einstellen</string>
@@ -684,10 +686,56 @@
     <string name="digital_clock_settings_summary">Stileinstellungen</string>
     <string name="event_service_settings_title">Ereignisse</string>
     <!-- QuickSettings Panel Transparency -->
+    <string name="quick_settings_category">Schnelleinstellungen</string>
+    <string name="qs_panel_alpha_title">Deckkraft der Schnelleinstellungen</string>
     <string name="qs_panel_alpha_summary">Durchsichtigkeit des Hintergrunds konfigurieren</string>
     <string name="splitscreen_force_systembar_enabled_title">Anzeigen der Systemleisten bei geteiltem Bildschirm erzwingen</string>
+    <string name="gesture_settings_title">Gesten</string>
+    <string name="gesture_settings_info">Navigationsleiste muss deaktiviert werden!\n\nVerfügbare Gesten:\n\nZurück\n- Wischen Sie von der linken/rechten Seite nach oben\n\nHome\n- Von der Mitte hoch wischen\n\nAnwendungsverlauf\n- In der Mitte hoch wischen und halten\n\nHome Taste lange drücken\n- Kurz hoch wischen und in der Mitte halten</string>
+    <string name="gesture_settings_info_new">Navigationsleiste wird deaktiviert/aktiviert!\n\nVerfügbare Gesten:\n\nZurück\n- Wischen Sie von der linken/rechten Seite nach oben\n\nHome\n- Von der Mitte hoch wischen\n\nAndwendungsverlauf\n- In der Mitte hoch wischen und halten\n\nUmschalten auf die letzte benutzte App\n- Kurz hoch wischen und in der Mitte halten</string>
+    <string name="use_bottom_gesture_title">Navigationsgesten</string>
+    <string name="use_bottom_gesture_summary">Benutze die \"hoch wischen\" Geste für die Navigation</string>
+    <string name="gesture_swipe_length_title">Länge des Wisch-Triggers</string>
+    <string name="gesture_swipe_length_summary">Länge des Wischens erforderlich, um die Geste auszulösen</string>
+    <string name="gesture_swipe_start_title">Auslösehöhe der Geste</string>
+    <string name="gesture_swipe_start_summary">Minimale Höhe von unten bis zum Auslösen der Geste</string>
+    <string name="gesture_action_timeout_title">Timeout zum Auslösen der Wischgeste</string>
+    <string name="gesture_action_timeout_summary">Timeout bevor die Gesten-Aktion gestartet wird</string>
+    <string name="unit_dpi">dpi</string>
+    <string name="unit_px">px</string>
+    <string name="header_category_omni">OmniGears</string>
+    <string name="omni_dashboard_summary">Omnify dein Gerät</string>
+    <string name="button_settings_title">Tasten</string>
+    <string name="columns_menu">Spalten-Layout</string>
+    <string name="hide_summary_menu">Zusammenfassung verbergen</string>
+    <string name="more_settings_title">Mehr</string>
+    <string name="omni_device_parts">Gerätefunktionen</string>
+    <string name="style_settings_title">Stil</string>
+    <string name="style_settings_summary">Hintergrundbilder und sonstiges</string>
+    <string name="custom_bars_settings_title">Balken</string>
     <!-- StatusBar -->
+    <string name="statusbar_settings_category">Statusleiste</string>
+    <string name="use_old_mobiletype_title">Alten Stil des Mobiltyps verwenden</string>
+    <string name="use_old_mobiletype_summary">Signal und Typ Symbole zusammenführen</string>
+    <string name="hide_notch_title">Notch ausblenden</string>
+    <string name="hide_notch_summary">Apps können den Notch Bereich nicht verwenden</string>
+    <string name="recents_tasks_visible_disable_title">Limit des Anwendungsverlaufs deaktivieren</string>
+    <string name="recents_tasks_visible_disable_summary">Alle zuletzt geöffneten Anwendungen ohne Zeit- oder Größenlimit anzeigen</string>
     <!-- Display Manager -->
+    <string name="omni_display_manager">Bildschirm Farben</string>
     <!-- Dialer Setting -->
+    <string name="dialer_settings_title">Telefon</string>
+    <string name="incall_vibrate_connect_title">Beim Verbinden vibrieren</string>
+    <string name="incall_vibrate_connect_summary">Gerät vibriert bei Verbindung</string>
+    <string name="incall_vibrate_call_wait_title">Beim Anklopfen vibrieren</string>
+    <string name="incall_vibrate_call_wait_summary">Gerät vibriert beim Anklopfen</string>
+    <string name="incall_vibrate_disconnect_title">Beim Trennen vibrieren</string>
+    <string name="incall_vibrate_disconnect_summary">Gerät vibriert beim Auflegen</string>
     <!-- Fingerprint -->
+    <string name="fingerprint_settings_title">Fingerabdruck</string>
+    <string name="fingerprint_category_custom_icon">Benutzerdefiniertes Symbol</string>
+    <string name="ambient_pulse_brightness_title">Helligkeit der Ambient-Benachrichtigung</string>
+    <string name="ambient_pulse_brightness_summary">Helligkeit setzen, die genutzt wird, wenn eine Benachrichtigung gezeigt wird</string>
+    <string name="ambient_doze_brightness_title">Helligkeit des Ambient-Bildschirms</string>
+    <string name="ambient_doze_brightness_summary">Helligkeit setzen, die während der Ambient-Anzeige genutzt wird</string>
 </resources>

@@ -74,6 +74,7 @@
     <string name="button_home_answers_call_title">Кнопка отвечает на вызов</string>
     <string name="button_home_answers_call_summary">Нажатие кнопки домой ответит на входящий вызов</string>
     <string name="button_other_title">Другие</string>
+    <string name="keys_action_app_switch_defaut">По умолчанию</string>
     <string name="keys_action_omniswitch_short">OmniSwitch</string>
     <string name="button_back_kill_enable_title">Кнопка \"Назад\" закроет приложение</string>
     <string name="button_back_kill_enable_summary">Закрытие текущего приложения удерживанием кнопки «назад»</string>
@@ -263,6 +264,8 @@
     <string name="network_traffic_autohide_threshold">Порог неактивности</string>
     <string name="network_traffic_enable_title">Включено</string>
     <!-- captive portal - connectivity check -->
+    <string name="captive_portal_mode_title">Проверка сетевого подключения</string>
+    <string name="captive_portal_mode_summary">Включить проверку сетевого соединения</string>
     <!-- statusbar brightness -->
     <string name="status_bar_brightness_control_title">Управление яркостью</string>
     <string name="status_bar_brightness_control_summary">Регулировать яркость экрана движением пальца по строке состояния</string>
@@ -684,10 +687,56 @@
     <string name="digital_clock_settings_summary">Настройки стиля</string>
     <string name="event_service_settings_title">Мероприятия</string>
     <!-- QuickSettings Panel Transparency -->
+    <string name="quick_settings_category">Быстрые настройки</string>
+    <string name="qs_panel_alpha_title">Непрозрачность быстрых настроек</string>
     <string name="qs_panel_alpha_summary">Настройка прозрачности фона</string>
     <string name="splitscreen_force_systembar_enabled_title">Принудительно показывать системные панели на разделённом экране</string>
+    <string name="gesture_settings_title">Жесты</string>
+    <string name="gesture_settings_info">Панель навигации должна быть отключена!\n\nДоступные жесты:\n\nНазад\n- Проведите вверх по левой или правой стороне \n\nГлавный экран\n- Проведите вверх по центру\n\nНедавние приложения\n- Проведите вверх по центру и удерживайте\n\nДолгое нажатие кнопки \"Домой\"\n- Коротко проведите по экрану вверх и удерживайте его в центре\n\n\nРаботает лучше при отключенной панели навигации.</string>
+    <string name="gesture_settings_info_new">Панель навигации будет отключена!\n\Доступные жесты:\n\nНазад\n- Проведите вверх по левой или правой стороне \n\nГлавный экран\n- Проведите вверх по центру\n\nНедавние приложения\n- Проведите вверх по центру и удерживайте\n\nДолгое нажатие кнопки \"Домой\"\n- Коротко проведите по экрану вверх и удерживайте его в центре</string>
+    <string name="use_bottom_gesture_title">Жесты навигации</string>
+    <string name="use_bottom_gesture_summary">Использовать жесты для навигации</string>
+    <string name="gesture_swipe_length_title">Высота срабатывания жеста</string>
+    <string name="gesture_swipe_length_summary">Расстояние снизу до срабатывания жеста</string>
+    <string name="gesture_swipe_start_title">Высота начала срабатывания жеста</string>
+    <string name="gesture_swipe_start_summary">Минимальная высота снизу для срабатывания жеста</string>
+    <string name="gesture_action_timeout_title">Тайм-аут срабатывания жеста</string>
+    <string name="gesture_action_timeout_summary">Тайм-аут до начала действия жеста</string>
+    <string name="unit_dpi">dpi</string>
+    <string name="unit_px">px</string>
+    <string name="header_category_omni">OmniGears</string>
+    <string name="omni_dashboard_summary">Настройте свое устройство</string>
+    <string name="button_settings_title">Кнопки</string>
+    <string name="columns_menu">Раскладка столбцов</string>
+    <string name="hide_summary_menu">Скрыть содержание</string>
+    <string name="more_settings_title">Ещё</string>
+    <string name="omni_device_parts">Возможности устройства</string>
+    <string name="style_settings_title">Стиль</string>
+    <string name="style_settings_summary">Обои и другие крутости</string>
+    <string name="custom_bars_settings_title">Панели</string>
     <!-- StatusBar -->
+    <string name="statusbar_settings_category">Строка состояния</string>
+    <string name="use_old_mobiletype_title">Использовать старый стиль отображения сети</string>
+    <string name="use_old_mobiletype_summary">Объединить значки сигнала и типа сети</string>
+    <string name="hide_notch_title">Скрыть вырез</string>
+    <string name="hide_notch_summary">Приложения не могут использовать область выреза</string>
+    <string name="recents_tasks_visible_disable_title">Отключить ограничения недавних приложений</string>
+    <string name="recents_tasks_visible_disable_summary">Показывать все недавние приложения без ограничений времени или размера</string>
     <!-- Display Manager -->
+    <string name="omni_display_manager">Цвет дисплея</string>
     <!-- Dialer Setting -->
+    <string name="dialer_settings_title">Телефон</string>
+    <string name="incall_vibrate_connect_title">Вибрировать при подключении</string>
+    <string name="incall_vibrate_connect_summary">Вибрация устройства при подключении</string>
+    <string name="incall_vibrate_call_wait_title">Вибрировать при ожидании</string>
+    <string name="incall_vibrate_call_wait_summary">Вибрация устройства при ожидании вызова</string>
+    <string name="incall_vibrate_disconnect_title">Вибрировать при отключении</string>
+    <string name="incall_vibrate_disconnect_summary">Вибрация устройства при отключении вызова</string>
     <!-- Fingerprint -->
+    <string name="fingerprint_settings_title">Сканер отпечатков пальцев</string>
+    <string name="fingerprint_category_custom_icon">Пользовательский значок</string>
+    <string name="ambient_pulse_brightness_title">Яркость уведомлений на Ambient display</string>
+    <string name="ambient_pulse_brightness_summary">Установите яркость при отображении уведомлений</string>
+    <string name="ambient_doze_brightness_title">Яркость Ambient display</string>
+    <string name="ambient_doze_brightness_summary">Установите яркость Ambient display</string>
 </resources>
