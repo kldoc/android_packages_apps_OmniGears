@@ -858,4 +858,7 @@
     <!-- lock screen media blur -->
     <string name="lockscreen_media_blur_title">Media artwork blur level</string>
     <string name="lockscreen_media_blur_summary">Control the blur amount of media artwork</string>
+
+    <string name="pulse_ambient_light_title">Ambient light notification</string>
+    <string name="pulse_ambient_light_summary">Show light bar on notification pulse</string>
 </resources>
