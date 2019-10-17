@@ -719,4 +719,6 @@
     <!-- Fingerprint -->
     <string name="fingerprint_settings_title">Otisk prstu</string>
     <string name="fingerprint_category_custom_icon">Vlastní ikona</string>
+    <!-- doze on charge -->
+    <!-- lockscreen media blur -->
 </resources>

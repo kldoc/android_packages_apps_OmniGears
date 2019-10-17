@@ -95,7 +95,7 @@
     <string name="doze_pulse_duration_in_title">Artarak</string>
     <string name="doze_pulse_duration_visible_title">Görünürlük süresi</string>
     <string name="doze_pulse_duration_out_title">Azalarak</string>
-    <string name="doze_pulse_on_notifications_title">Bildirimlerde titre</string>
+    <string name="doze_pulse_on_notifications_title">Bildirimlerde yanıp sön</string>
     <string name="doze_pulse_on_notifications_summary">Sadece muallak bildirimlerde faaliyete geçer</string>
     <string name="doze_shake_title">Sallama ayarları</string>
     <string name="doze_shake_mode_title">Sallama modu</string>
@@ -128,11 +128,11 @@
     <string name="veryhard_shake">Çok zor</string>
     <string name="strong_shake">Kuvvetli</string>
     <string name="fully_mode">Tam mod</string>
-    <string name="pocket_shake_mode">Cebe koy ve salla</string>
-    <string name="pocket_pulse_mode">Cebe koy ve titre</string>
+    <string name="pocket_shake_mode">Cep ve sallama</string>
+    <string name="pocket_pulse_mode">Cep ve yanıp sönme</string>
     <string name="pocket_only_mode">Cep</string>
-    <string name="shake_pulse_mode">Salla ve titre</string>
-    <string name="pulse_only_mode">Titre (standart)</string>
+    <string name="shake_pulse_mode">Sallama ve yanıp sönme</string>
+    <string name="pulse_only_mode">Yanıp sön (standart)</string>
     <!-- Swap volume buttons when the screen is rotated -->
     <string name="swap_volume_buttons_title">Döndürme ile eşleştir</string>
     <string name="swap_volume_buttons_summary">Ses seviyesi düğmelerini mevcûd döndürme ayarına bağlı olarak ayarla</string>
@@ -338,7 +338,7 @@
     <string name="status_bar_quick_qs_pulldown_right">Sağ</string>
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Işık ayarlarını düzenle</string>
-    <string name="pulse_speed_title">Yanma müddeti ve hızı</string>
+    <string name="pulse_speed_title">Yanıp sönme müddeti ve hızı</string>
     <string name="default_time">Normal</string>
     <string name="custom_time">Özel</string>
     <string name="dialog_delete_title">Sil</string>
@@ -696,8 +696,17 @@
     <string name="splitscreen_force_systembar_enabled_title">Bölünmüş ekrandayken sistem çubuklarını göstermeye mecbûr edin</string>
     <string name="gesture_settings_title">Hareketler</string>
     <string name="gesture_settings_info">Gezinti çubuğu devre dışı bırakılmalıdır!\n\nMevcut hareketler:\n\nGeri\n- Sol veya sağ tarafta yukarıya doğru kaydırın\n\nAna ekran\n- Orta kısımda yukarıya doğru kaydırın\n\nSon uygulamalar\n- Orta kısımda yukarıya doğru kaydırın ve parmağınızı bırakmayın\n\nAna ekran tuşuna uzun müddet basma\n- Aniden yukarıya doğru kaydırın ve parmağınızı orta kısımda tutun</string>
+    <string name="gesture_settings_info_new">Gezinti çubuğu devre dışı bırakılacak/devreye sokulacak!\n\nMevcut hareketler:\n\nGeri\n- Sol veya sağ tarafta yukarıya doğru kaydırın\n\nAna ekran\n- Orta kısımda yukarıya doğru kaydırın\n\nSon uygulamalar\n- Orta kısımda yukarıya doğru kaydırın ve parmağınızı bırakmayın\n\nSon uygulamaya geçiş\n- Kısa bir müddet boyunca yukarıya doğru kaydırın ve parmağınızı orta kısımda tutun</string>
     <string name="use_bottom_gesture_title">Gezinti hareketleri</string>
     <string name="use_bottom_gesture_summary">Gezinti için alttan yukarıya doğru kaydırma hareketlerini kullanın</string>
+    <string name="gesture_swipe_length_title">Kaydırma uzunluğu</string>
+    <string name="gesture_swipe_length_summary">Hareketi devreye sokmak için gereken kaydırmanın uzunluğu</string>
+    <string name="gesture_swipe_start_title">Kaydırmanın başlangıç yüksekliği</string>
+    <string name="gesture_swipe_start_summary">Alttan asgarî yükseklik</string>
+    <string name="gesture_action_timeout_title">Kaydırmanın zaman aşımı</string>
+    <string name="gesture_action_timeout_summary">Hareket eylemi başlamadan evvelki zaman aşımı</string>
+    <string name="unit_dpi">dpi</string>
+    <string name="unit_px">px</string>
     <string name="header_category_omni">OmniGears</string>
     <string name="omni_dashboard_summary">Cihazınızı omnileştirin</string>
     <string name="button_settings_title">Düğmeler</string>
@@ -710,6 +719,8 @@
     <string name="custom_bars_settings_title">Çubuklar</string>
     <!-- StatusBar -->
     <string name="statusbar_settings_category">Durum çubuğu</string>
+    <string name="use_old_mobiletype_title">Eski telefon tarzını kullan</string>
+    <string name="use_old_mobiletype_summary">Sinyal ve tür simgelerini birleştirir</string>
     <string name="hide_notch_title">Çentiği sakla</string>
     <string name="hide_notch_summary">Uygulamalar çentiğin bulunduğu bölgeyi kullanamaz</string>
     <string name="recents_tasks_visible_disable_title">Son uygulama sınırlarını devre dışı bırak</string>
@@ -727,6 +738,14 @@
     <!-- Fingerprint -->
     <string name="fingerprint_settings_title">Parmak izi</string>
     <string name="fingerprint_category_custom_icon">Özel simge</string>
+    <string name="ambient_pulse_brightness_title">Bildirim parlaklığı</string>
+    <string name="ambient_pulse_brightness_summary">Bildirimlerin gösterildiği vakit kullanılacak olan parlaklığı belirleyin</string>
     <string name="ambient_doze_brightness_title">Fa\'âl ekran parlaklığı</string>
     <string name="ambient_doze_brightness_summary">Fa\'âl ekran devredeyken kullanılacak olan parlaklığı belirleyin</string>
+    <!-- doze on charge -->
+    <string name="doze_on_charge_title">Şarj edilirken fa\'âl ekranı göster</string>
+    <string name="doze_on_charge_summary">Şarj edilirken ekranı uyandırır</string>
+    <!-- lockscreen media blur -->
+    <string name="lockscreen_media_blur_title">Albüm kapağının bulanıklık seviyesi</string>
+    <string name="lockscreen_media_blur_summary">Kilit ekranındaki albüm kapağının bulanıklık miktarını kontrol edin</string>
 </resources>

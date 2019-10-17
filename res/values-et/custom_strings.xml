@@ -74,6 +74,7 @@
     <string name="button_home_answers_call_title">Nupp vastab kõnele</string>
     <string name="button_home_answers_call_summary">Kodunupule vajutades vastad sissetulevale kõnele</string>
     <string name="button_other_title">Muu</string>
+    <string name="keys_action_app_switch_defaut">Vaikimisi</string>
     <string name="keys_action_omniswitch_short">OmniSwitch</string>
     <string name="button_back_kill_enable_title">Sundsulge rakendus tagasinupuga</string>
     <string name="button_back_kill_enable_summary">Sundsulge esiplaanil rakendus, vajutades tagasinuppu pikalt</string>
@@ -263,6 +264,8 @@
     <string name="network_traffic_autohide_threshold">Ebaaktiivsuse piirmäär</string>
     <string name="network_traffic_enable_title">Luba</string>
     <!-- captive portal - connectivity check -->
+    <string name="captive_portal_mode_title">Võrguühenduse saadavuse kontroll</string>
+    <string name="captive_portal_mode_summary">Luba pääsulehe tuvastus</string>
     <!-- statusbar brightness -->
     <string name="status_bar_brightness_control_title">Heleduse reguleerimine</string>
     <string name="status_bar_brightness_control_summary">Reguleeri heledust, libistades mööda ülariba</string>
@@ -680,10 +683,60 @@
     <string name="digital_clock_settings_summary">Stiili seaded</string>
     <string name="event_service_settings_title">Sündmused</string>
     <!-- QuickSettings Panel Transparency -->
+    <string name="quick_settings_category">Kiirseaded</string>
+    <string name="qs_panel_alpha_title">Kiirseadete läbipaistvus</string>
     <string name="qs_panel_alpha_summary">Seadista tausta läbipaistvust</string>
     <string name="splitscreen_force_systembar_enabled_title">Sunni süsteemiribade kuvamist poolitatud kuval</string>
+    <string name="gesture_settings_title">Viiped</string>
+    <string name="use_bottom_gesture_title">Navigeerimisviiped</string>
+    <string name="use_bottom_gesture_summary">Kasuta navigeerimiseks alumisi viipežeste</string>
+    <string name="gesture_swipe_length_title">Viipe päästiku pikkus</string>
+    <string name="gesture_swipe_length_summary">Viipe nõutud pikkus žesti käivitamiseks</string>
+    <string name="gesture_swipe_start_title">Viipe päästiku alustamise kõrgus</string>
+    <string name="gesture_swipe_start_summary">Minimaalne kõrgus altpoolt, mis käivitab žesti</string>
+    <string name="gesture_action_timeout_title">Viipe päästiku ajalõpp</string>
+    <string name="gesture_action_timeout_summary">Ajalõpp enne žestitegevuse alustamist</string>
+    <string name="unit_dpi">DPI</string>
+    <string name="unit_px">px</string>
+    <string name="header_category_omni">OmniGears</string>
+    <string name="omni_dashboard_summary">Omni oma seadet</string>
+    <string name="button_settings_title">Nupud</string>
+    <string name="columns_menu">Veergude paigutus</string>
+    <string name="hide_summary_menu">Peida kokkuvõte</string>
+    <string name="more_settings_title">Veel</string>
+    <string name="omni_device_parts">Seadme funktsioonid</string>
+    <string name="style_settings_title">Stiil</string>
+    <string name="style_settings_summary">Taustapildid ja muu nodi</string>
+    <string name="custom_bars_settings_title">Ribad</string>
     <!-- StatusBar -->
+    <string name="statusbar_settings_category">Olekuriba</string>
+    <string name="use_old_mobiletype_title">Kasuta vana mobiilitüübi stiili</string>
+    <string name="use_old_mobiletype_summary">Ühenda signaali- ja tüübiikoonid</string>
+    <string name="hide_notch_title">Peida kulm</string>
+    <string name="hide_notch_summary">Rakendused ei saa kasutada kulmuala</string>
+    <string name="recents_tasks_visible_disable_title">Keela hiljutiste rakenduste piirangud</string>
+    <string name="recents_tasks_visible_disable_summary">Kuva kõik hiljutised rakendused ilma aja- või suuruspiiranguta</string>
     <!-- Display Manager -->
+    <string name="omni_display_manager">Ekraani värvid</string>
     <!-- Dialer Setting -->
+    <string name="dialer_settings_title">Telefon</string>
+    <string name="incall_vibrate_connect_title">Vibreeri ühendamisel</string>
+    <string name="incall_vibrate_connect_summary">Seade vibreerib ühendamisel</string>
+    <string name="incall_vibrate_call_wait_title">Vibreeri kõne ootel</string>
+    <string name="incall_vibrate_call_wait_summary">Seade vibreerib kõne ootel</string>
+    <string name="incall_vibrate_disconnect_title">Vibreeri ühenduse katkemisel</string>
+    <string name="incall_vibrate_disconnect_summary">Seade vibreerib ühenduse katkemisel</string>
     <!-- Fingerprint -->
+    <string name="fingerprint_settings_title">Sõrmejälg</string>
+    <string name="fingerprint_category_custom_icon">Kohandatud ikoon</string>
+    <string name="ambient_pulse_brightness_title">Ambientse teate heledus</string>
+    <string name="ambient_pulse_brightness_summary">Määra heleduse tase, mida kasutada kui kuvatakse teatisi</string>
+    <string name="ambient_doze_brightness_title">Ambientse ekraani heledus</string>
+    <string name="ambient_doze_brightness_summary">Määra heleduse tase, mida kasutada ambientse ekraaniga</string>
+    <!-- doze on charge -->
+    <string name="doze_on_charge_title">Kuva ambientset ekraani laadimise ajal</string>
+    <string name="doze_on_charge_summary">Ärata ekraan laadimise ajal</string>
+    <!-- lockscreen media blur -->
+    <string name="lockscreen_media_blur_title">Meedia kaanepildi udutase</string>
+    <string name="lockscreen_media_blur_summary">Seadista lukustuskuva meedia kaanepildi udu hulka</string>
 </resources>

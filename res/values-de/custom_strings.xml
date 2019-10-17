@@ -265,6 +265,7 @@
     <string name="network_traffic_enable_title">Aktiviert</string>
     <!-- captive portal - connectivity check -->
     <string name="captive_portal_mode_title">Netzwerkverbindungs-Überprüfung</string>
+    <string name="captive_portal_mode_summary">Aktiviere Captive Portal-Erkennung</string>
     <!-- statusbar brightness -->
     <string name="status_bar_brightness_control_title">Helligkeitskontrolle</string>
     <string name="status_bar_brightness_control_summary">Helligkeit durch Wischen über die Statusleiste einstellen</string>
@@ -738,4 +739,10 @@
     <string name="ambient_pulse_brightness_summary">Helligkeit setzen, die genutzt wird, wenn eine Benachrichtigung gezeigt wird</string>
     <string name="ambient_doze_brightness_title">Helligkeit des Ambient-Bildschirms</string>
     <string name="ambient_doze_brightness_summary">Helligkeit setzen, die während der Ambient-Anzeige genutzt wird</string>
+    <!-- doze on charge -->
+    <string name="doze_on_charge_title">Ambient-Display beim Laden anzeigen</string>
+    <string name="doze_on_charge_summary">Bildschirm beim Laden aufwecken</string>
+    <!-- lockscreen media blur -->
+    <string name="lockscreen_media_blur_title">Medien-Bild Unschärfe Level</string>
+    <string name="lockscreen_media_blur_summary">Steuere die Unschärfestärke des Sperrbildschirm Medien-Bildes</string>
 </resources>
