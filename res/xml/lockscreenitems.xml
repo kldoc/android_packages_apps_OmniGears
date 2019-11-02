@@ -63,6 +63,11 @@
         android:summary="@string/pulse_ambient_light_summary"
         android:defaultValue="false" />
 
+    <org.omnirom.omnilib.preference.ColorSelectPreference
+        android:key="pulse_color"
+        android:title="@string/pulse_ambient_light_color_title"
+        android:persistent="false" />
+
     <org.omnirom.omnilib.preference.SeekBarPreference
         android:key="ambient_doze_brightness"
         android:title="@string/ambient_doze_brightness_title"

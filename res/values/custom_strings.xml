@@ -861,4 +861,5 @@
 
     <string name="pulse_ambient_light_title">Ambient light notification</string>
     <string name="pulse_ambient_light_summary">Show light bar on notification pulse</string>
+    <string name="pulse_ambient_light_color_title">Select Ambiant pulse light color</string>
 </resources>
