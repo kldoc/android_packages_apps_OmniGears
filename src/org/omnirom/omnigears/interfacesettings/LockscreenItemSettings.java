@@ -32,6 +32,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
 import org.omnirom.omnilib.preference.SeekBarPreference;
+import org.omnirom.omnilib.preference.SystemSettingSwitchPreference;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -43,10 +44,12 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
     private static final String KEY_PULSE_BRIGHTNESS = "ambient_pulse_brightness";
     private static final String KEY_DOZE_BRIGHTNESS = "ambient_doze_brightness";
     private static final String KEY_LOCKSCREEN_MEDIA_BLUR = "lockscreen_media_blur";
+    private static final String PULSE_AMBIANT_LIGHT_PREF = "pulse_ambient_light";
 
     private SeekBarPreference mPulseBrightness;
     private SeekBarPreference mDozeBrightness;
     private SeekBarPreference mLockscreenMediaBlur;
+    private SystemSettingSwitchPreference mPulseEdgeLights;
 
     @Override
     public int getMetricsCategory() {
@@ -84,6 +87,12 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
                 Settings.System.OMNI_LOCKSCREEN_MEDIA_BLUR, defaultBlur);
         mLockscreenMediaBlur.setValue(value);
         mLockscreenMediaBlur.setOnPreferenceChangeListener(this);
+
+        mPulseEdgeLights = (SystemSettingSwitchPreference) findPreference(PULSE_AMBIANT_LIGHT_PREF);
+        boolean mPulseNotificationEnabled = Settings.Secure.getInt(getContentResolver(),
+                Settings.Secure.DOZE_ENABLED, 0) != 0;
+        mPulseEdgeLights.setEnabled(mPulseNotificationEnabled);
+
     }
 
     @Override
