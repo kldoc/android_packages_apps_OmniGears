@@ -55,6 +55,7 @@ public class StyleSettings extends SettingsPreferenceFragment implements
     private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
     private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String FILE_HEADER_SELECT = "file_header_select";
+    private static final String CUSTOM_THEME_BROWSE = "theme_select_activity";
 
     private static final int REQUEST_PICK_IMAGE = 0;
 
@@ -67,6 +68,7 @@ public class StyleSettings extends SettingsPreferenceFragment implements
     private SystemSettingSwitchPreference mHeaderEnabled;
     private Preference mFileHeader;
     private String mFileHeaderProvider;
+    private Preference mThemeBrowse;
 
     @Override
     public void onResume() {
@@ -86,6 +88,9 @@ public class StyleSettings extends SettingsPreferenceFragment implements
 
         mWallBrowse = findPreference(CUSTOM_WALL_BROWSE);
         mWallBrowse.setEnabled(isBrowseWallsAvailable());
+
+        mThemeBrowse = findPreference(CUSTOM_THEME_BROWSE);
+        mThemeBrowse.setEnabled(isBrowseThemesAvailable());
 
         mDaylightHeaderProvider = getResources().getString(R.string.daylight_header_provider);
         mFileHeaderProvider = getResources().getString(R.string.file_header_provider);
@@ -181,6 +186,13 @@ public class StyleSettings extends SettingsPreferenceFragment implements
         PackageManager pm = getPackageManager();
         Intent browse = new Intent();
         browse.setClassName("org.omnirom.omnistyle", "org.omnirom.omnistyle.PickHeaderActivity");
+        return pm.resolveActivity(browse, 0) != null;
+    }
+
+    private boolean isBrowseThemesAvailable() {
+        PackageManager pm = getPackageManager();
+        Intent browse = new Intent();
+        browse.setClassName("com.android.customization", "com.android.customization.picker.CustomizationPickerActivity");
         return pm.resolveActivity(browse, 0) != null;
     }
 
