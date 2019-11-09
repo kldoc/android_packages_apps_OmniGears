@@ -19,7 +19,6 @@ package org.omnirom.omnigears.interfacesettings;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.net.TrafficStats;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
@@ -57,7 +56,6 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     private static final String KEY_QS_PANEL_ALPHA = "qs_panel_alpha";
     private static final String KEY_STATUSBAR_CATEGORY = "statusbar_settings_category";
     private static final String KEY_HIDE_NOTCH = "hide_notch";
-    private static final String NETWORK_TRAFFIC_ROOT = "category_network_traffic";
 
     private ListPreference mQuickPulldown;
     private AppMultiSelectListPreference mAspectRatioAppsSelect;
@@ -117,12 +115,6 @@ public class BarsSettings extends SettingsPreferenceFragment implements
             final Preference hideNotchPref =
                 (Preference) prefScreen.findPreference(KEY_HIDE_NOTCH);
             statusBarCategory.removePreference(hideNotchPref);
-        }
-
-        // TrafficStats will return UNSUPPORTED if the device does not support it.
-        if (TrafficStats.getTotalTxBytes() == TrafficStats.UNSUPPORTED ||
-                TrafficStats.getTotalRxBytes() == TrafficStats.UNSUPPORTED) {
-            prefScreen.removePreference(findPreference(NETWORK_TRAFFIC_ROOT));
         }
     }
 
