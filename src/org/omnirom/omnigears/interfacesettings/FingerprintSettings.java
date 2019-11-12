@@ -80,7 +80,6 @@ public class FingerprintSettings extends SettingsPreferenceFragment implements
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
         mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.OMNI_FINGERPRINT_SUCCESS_VIB, 1) == 1));
-        mFingerprintVib.setChecked(true);
         mFingerprintVib.setOnPreferenceChangeListener(this);
 
         boolean isFODDevice = getResources().getBoolean(com.android.internal.R.bool.config_usesFOD);
