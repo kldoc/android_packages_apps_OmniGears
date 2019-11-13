@@ -26,4 +26,5 @@
     <color name="omni_clock_ambient_bg_color">#000000</color>
     <color name="omni_clock_text_color">#ffffff</color>
     <color name="omni_logo_color">#a1c729</color>
+    <color name="dashboard_icon_color">@*android:color/accent_device_default_light</color>
 </resources>
