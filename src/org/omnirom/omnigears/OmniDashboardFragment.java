@@ -48,7 +48,6 @@ public class OmniDashboardFragment extends DashboardFragment {
     private static final String KEY_FINGERPRINT_SETTINGS = "fingerprint_settings";
 
     private static final String PACKAGE_DEVICE_PARTS = "org.omnirom.device";
-    private static final String PACKAGE_DISPLAY_MANAGER = "org.omnirom.omnidisplaymanager";
 
     private FingerprintManager mFingerprintManager;
 
@@ -57,12 +56,6 @@ public class OmniDashboardFragment extends DashboardFragment {
         super.onCreatePreferences(savedInstanceState, rootKey);
         if (!PackageUtils.isAvailableApp(PACKAGE_DEVICE_PARTS, getContext())) {
             Preference pref = getPreferenceScreen().findPreference(KEY_DEVICE_PARTS);
-            if (pref != null) {
-                getPreferenceScreen().removePreference(pref);
-            }
-        }
-        if (!PackageUtils.isAvailableApp(PACKAGE_DISPLAY_MANAGER, getContext())) {
-            Preference pref = getPreferenceScreen().findPreference(KEY_DISPLAY_MANAGER);
             if (pref != null) {
                 getPreferenceScreen().removePreference(pref);
             }

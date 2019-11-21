@@ -61,15 +61,6 @@
         android:fragment="org.omnirom.omnigears.moresettings.OmniJawsSettings" />
 
     <Preference
-        android:key="display_manager"
-        android:title="@string/omni_display_manager"
-        android:icon="@drawable/ic_settings_displaymanager">
-        <intent
-             android:targetPackage="org.omnirom.omnidisplaymanager"
-             android:targetClass="org.omnirom.omnidisplaymanager.ColorSettingsActivity" />
-    </Preference>
-
-    <Preference
         android:key="dialer_settings"
         android:title="@string/dialer_settings_title"
         android:icon="@drawable/ic_homepage_dialer"
