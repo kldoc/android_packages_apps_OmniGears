@@ -56,13 +56,13 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private static final String CATEGORY_KEYS = "button_keys";
     private static final String CATEGORY_OTHER = "button_other";
     private static final String CATEGORY_POWER = "button_power";
-    private static final String KEYS_SHOW_NAVBAR_KEY = "navigation_bar_show";
+//    private static final String KEYS_SHOW_NAVBAR_KEY = "navigation_bar_show";
     private static final String NAVIGATION_BAR_RECENTS_STYLE = "navbar_recents_style";
     private static final String KEY_BUTTON_LIGHT = "button_brightness";
     private static final String SYSTEM_PROXI_CHECK_ENABLED = "system_proxi_check_enabled";
 
     private ListPreference mNavbarRecentsStyle;
-    private SwitchPreference mEnableNavBar;
+//    private SwitchPreference mEnableNavBar;
     private Preference mButtonLight;
     
 
@@ -90,17 +90,17 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         final PreferenceCategory powerCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_POWER);
 
-        mEnableNavBar = (SwitchPreference) prefScreen.findPreference(KEYS_SHOW_NAVBAR_KEY);
+//        mEnableNavBar = (SwitchPreference) prefScreen.findPreference(KEYS_SHOW_NAVBAR_KEY);
         mButtonLight = prefScreen.findPreference(KEY_BUTTON_LIGHT);
 
         if (!buttonLights || deviceKeys == 0) {
             keysCategory.removePreference(mButtonLight);
         }
 
-        boolean showNavBarDefault = DeviceUtils.deviceSupportNavigationBar(getActivity());
-        boolean showNavBar = Settings.System.getInt(resolver,
-                Settings.System.OMNI_NAVIGATION_BAR_SHOW, showNavBarDefault ? 1 : 0) == 1;
-        mEnableNavBar.setChecked(showNavBar);
+//        boolean showNavBarDefault = DeviceUtils.deviceSupportNavigationBar(getActivity());
+//        boolean showNavBar = Settings.System.getInt(resolver,
+//                Settings.System.OMNI_NAVIGATION_BAR_SHOW, showNavBarDefault ? 1 : 0) == 1;
+//        mEnableNavBar.setChecked(showNavBar);
 
         mNavbarRecentsStyle = (ListPreference) findPreference(NAVIGATION_BAR_RECENTS_STYLE);
         int recentsStyle = Settings.System.getInt(resolver,
@@ -119,12 +119,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference == mEnableNavBar) {
-            boolean checked = ((SwitchPreference)preference).isChecked();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.OMNI_NAVIGATION_BAR_SHOW, checked ? 1:0);
-            return true;
-        }
+//        if (preference == mEnableNavBar) {
+//            boolean checked = ((SwitchPreference)preference).isChecked();
+//            Settings.System.putInt(getContentResolver(),
+//                    Settings.System.OMNI_NAVIGATION_BAR_SHOW, checked ? 1:0);
+//            return true;
+//        }
         return super.onPreferenceTreeClick(preference);
     }
 
