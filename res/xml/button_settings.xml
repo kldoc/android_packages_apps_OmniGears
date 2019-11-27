@@ -82,6 +82,10 @@
             android:entryValues="@array/navbar_recents_style_values"
             android:persistent="false"/>
 
+        <Preference
+            android:icon="@drawable/ic_info_outline_24dp"
+            android:persistent="false"
+            android:summary="@string/recents_style_info_title" />
     </PreferenceCategory>
 
 </PreferenceScreen>
