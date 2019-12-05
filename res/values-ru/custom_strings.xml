@@ -733,7 +733,7 @@
     <string name="incall_vibrate_disconnect_title">Вибрировать при отключении</string>
     <string name="incall_vibrate_disconnect_summary">Вибрация устройства при отключении вызова</string>
     <!-- Fingerprint -->
-    <string name="fingerprint_settings_title">Сканер отпечатков пальцев</string>
+    <string name="fingerprint_settings_title">Отпечаток</string>
     <string name="fingerprint_category_custom_icon">Пользовательский значок</string>
     <string name="ambient_pulse_brightness_title">Яркость уведомлений на Ambient display</string>
     <string name="ambient_pulse_brightness_summary">Установите яркость при отображении уведомлений</string>
@@ -741,7 +741,7 @@
     <string name="ambient_doze_brightness_summary">Установите яркость Ambient display</string>
     <!-- doze on charge -->
     <string name="doze_on_charge_title">Включать Ambient display во время зарядки</string>
-    <string name="doze_on_charge_summary">Пробуждения экрана во время зарядки</string>
+    <string name="doze_on_charge_summary">Пробуждение экрана во время зарядки</string>
     <!-- lockscreen media blur -->
     <string name="lockscreen_media_blur_title">Степень размытия медиа-обложки</string>
     <string name="lockscreen_media_blur_summary">Степень размытия медиа-обложки на экране блокировки</string>

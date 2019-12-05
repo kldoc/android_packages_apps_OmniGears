@@ -264,6 +264,8 @@
     <string name="network_traffic_autohide_threshold">Práh nečinnosti</string>
     <string name="network_traffic_enable_title">Povolit</string>
     <!-- captive portal - connectivity check -->
+    <string name="captive_portal_mode_title">Kontrola konektivity sítě</string>
+    <string name="captive_portal_mode_summary">Povolit test připojení k síti</string>
     <!-- statusbar brightness -->
     <string name="status_bar_brightness_control_title">Ovládání jasu</string>
     <string name="status_bar_brightness_control_summary">Nastavit jas posouváním po stavovém řádku</string>
@@ -693,7 +695,16 @@
     <string name="qs_panel_alpha_summary">Nastavit neprůhlednost pozadí</string>
     <string name="splitscreen_force_systembar_enabled_title">Vynuceně zobrazit systémové panely na rozdělené obrazovce</string>
     <string name="gesture_settings_title">Gesta</string>
+    <string name="gesture_settings_info">Navigační panel musí být vypnutý!\n\nDostupná gesta:\n\nZpět\n- Potáhnutím nahoru na levé nebo pravé straně\n\nDomů\n- Potáhnutím nahoru uprostřed\n\nNedávné aplikace\n- Potáhnutím nahoru uprostřed a přidržením\n\nDlouhý stisk tlačítka Domů\n- Krátkým potáhnutím nahoru a přidržením uprostřed</string>
+    <string name="gesture_settings_info_new">Navigační panel bude vypnutý/zapnutý!\n\nDostupná gesta:\n\nZpět\n- Potáhnutím nahoru na levé nebo pravé straně\n\nDomů\n- Potáhnutím nahoru uprostřed\n\nNedávné aplikace\n- Potáhnutím nahoru uprostřed a přidržením\n\nPřepnutí na poslední aplikaci\n- Krátkým potáhnutím nahoru a přidržením uprostřed</string>
     <string name="use_bottom_gesture_title">Navigační gesta</string>
+    <string name="use_bottom_gesture_summary">Pro navigaci použít gesta potáhnutím zdola nahoru</string>
+    <string name="gesture_swipe_length_title">Délka spouštěcí oblasti</string>
+    <string name="gesture_swipe_length_summary">Délka požadovaného potáhnutí ke spuštění gesta</string>
+    <string name="gesture_swipe_start_title">Počáteční výška spuštění gesta</string>
+    <string name="gesture_swipe_start_summary">Minimální výška od spodního okraje pro spuštění gesta</string>
+    <string name="gesture_action_timeout_title">Časový limit spuštění gesta</string>
+    <string name="gesture_action_timeout_summary">Časový limit před spuštěním gesta</string>
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="header_category_omni">OmniGears</string>
@@ -708,8 +719,16 @@
     <string name="custom_bars_settings_title">Lišty</string>
     <!-- StatusBar -->
     <string name="statusbar_settings_category">Stavová lišta</string>
+    <string name="use_old_mobiletype_title">Použít starý typ mobilní sítě</string>
+    <string name="use_old_mobiletype_summary">Sloučit ikony signálu a sítě</string>
+    <string name="hide_notch_title">Skrýt výřez</string>
+    <string name="hide_notch_summary">Aplikace nemohou používat oblast výřezu</string>
+    <string name="recents_tasks_visible_disable_title">Vypnout limity nedávných aplikací</string>
+    <string name="recents_tasks_visible_disable_summary">Zobrazit všechny nedávné aplikace bez omezení času a velikosti</string>
     <!-- Display Manager -->
+    <string name="omni_display_manager">Barvy displeje</string>
     <!-- Dialer Setting -->
+    <string name="dialer_settings_title">Telefon</string>
     <string name="incall_vibrate_connect_title">Vibrovat při připojení</string>
     <string name="incall_vibrate_connect_summary">Zařízení bude při připojení vibrovat</string>
     <string name="incall_vibrate_call_wait_title">Vibrovat při čekání</string>
@@ -719,6 +738,14 @@
     <!-- Fingerprint -->
     <string name="fingerprint_settings_title">Otisk prstu</string>
     <string name="fingerprint_category_custom_icon">Vlastní ikona</string>
+    <string name="ambient_pulse_brightness_title">Jas ambientního oznámení</string>
+    <string name="ambient_pulse_brightness_summary">Nastavte jas, který se má použít při zobrazení oznámení</string>
+    <string name="ambient_doze_brightness_title">Jas ambientního displeje</string>
+    <string name="ambient_doze_brightness_summary">Nastavte jas, který se má použít při zapnutém ambientním displeji</string>
     <!-- doze on charge -->
+    <string name="doze_on_charge_title">Zobrazit ambientní displej při nabíjení</string>
+    <string name="doze_on_charge_summary">Probudit obrazovku při nabíjení</string>
     <!-- lockscreen media blur -->
+    <string name="lockscreen_media_blur_title">Úroveň rozostření obalu interpreta</string>
+    <string name="lockscreen_media_blur_summary">Nastavení hodnoty rozostření obalu interpreta na zamykací obrazovce</string>
 </resources>
