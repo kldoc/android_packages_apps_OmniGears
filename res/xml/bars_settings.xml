@@ -70,7 +70,7 @@
 
         </PreferenceCategory>
 
-        <PreferenceCategory
+        <!--<PreferenceCategory
             android:key="category_navigationbar"
             android:title="@string/navigationbar_title">
 
@@ -80,7 +80,7 @@
                 android:summary="@string/navigation_bar_menu_arrow_keys_summary"
                 android:defaultValue="fale"/>
 
-        </PreferenceCategory>
+        </PreferenceCategory>-->
 
         <PreferenceCategory
             android:key="aspect_ratio_category"
