@@ -42,5 +42,12 @@
                 android:defaultValue="true"
                 android:persistent="true" />
 
+            <Preference
+                android:title="@string/omni_remote_title"
+                android:summary="@string/omni_remote_summary" >
+                <intent android:action="android.intent.action.MAIN"
+                        android:targetPackage="org.omnirom.omniremote"
+                        android:targetClass="org.omnirom.omniremote.MainActivity" />
+            </Preference>
         </PreferenceCategory>
 </PreferenceScreen>
