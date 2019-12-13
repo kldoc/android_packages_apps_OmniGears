@@ -65,17 +65,17 @@
 
         </PreferenceCategory>
 
-        <!--<PreferenceCategory
+        <PreferenceCategory
             android:key="category_navigationbar"
             android:title="@string/navigationbar_title">
 
-            <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
-                android:key="navigation_bar_menu_arrow_keys"
-                android:title="@string/navigation_bar_menu_arrow_keys_title"
-                android:summary="@string/navigation_bar_menu_arrow_keys_summary"
-                android:defaultValue="fale"/>
+            <org.omnirom.omnilib.preference.SecureSettingSwitchPreference
+                android:key="show_rotation_suggestions"
+                android:title="@string/show_rotation_suggestions_title"
+                android:summary="@string/show_rotation_suggestions_summary"
+                android:defaultValue="true"/>
 
-        </PreferenceCategory>-->
+        </PreferenceCategory>
 
         <PreferenceCategory
             android:key="aspect_ratio_category"

@@ -862,4 +862,7 @@
 
     <string name="omni_remote_title">OmniRemote</string>
     <string name="omni_remote_summary">VNC server to allow remote connection to device</string>
+
+    <string name="show_rotation_suggestions_title">Show rotation suggestions</string>
+    <string name="show_rotation_suggestions_summary">In locked rotation mode</string>
 </resources>
