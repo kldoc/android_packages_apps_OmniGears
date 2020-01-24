@@ -382,7 +382,7 @@
     <string name="device_hostname">Cihaz adı</string>
     <!-- OMS -->
     <string name="theming_title">Tema</string>
-    <string name="status_bar_ime_notification_title">Girişi yöntemi bildirimini göster</string>
+    <string name="status_bar_ime_notification_title">Giriş yöntemi bildirimini göster</string>
     <string name="status_bar_ime_notification_summary">Gezinti çubuğu mevcûd değilse</string>
     <string name="navigation_bar_ime_button_title">Gezinti çubuğunda giriş yöntemi düğmesini göster</string>
     <string name="navigation_bar_ime_button_summary">Gezinti çubuğunda giriş yöntemi değiştiricisi</string>

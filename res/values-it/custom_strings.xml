@@ -74,6 +74,7 @@
     <string name="button_home_answers_call_title">Tasto risposta chiamata</string>
     <string name="button_home_answers_call_summary">Premendo il pulsante home si risponderà alla chiamata in arrivo</string>
     <string name="button_other_title">Altro</string>
+    <string name="keys_action_app_switch_defaut">Predefinito</string>
     <string name="keys_action_omniswitch_short">Interruttore di Omni</string>
     <string name="button_back_kill_enable_title">Termina app con tasto indietro</string>
     <string name="button_back_kill_enable_summary">Termina app in primo piano premendo a lungo il tasto indietro</string>
@@ -263,6 +264,8 @@
     <string name="network_traffic_autohide_threshold">Soglia inattività</string>
     <string name="network_traffic_enable_title">Abilita</string>
     <!-- captive portal - connectivity check -->
+    <string name="captive_portal_mode_title">Controllo connettività di rete</string>
+    <string name="captive_portal_mode_summary">Attiva rilevamento captive portal</string>
     <!-- statusbar brightness -->
     <string name="status_bar_brightness_control_title">Controllo luminosità</string>
     <string name="status_bar_brightness_control_summary">Regola la luminosità scorrendo il dito sulla barra di stato</string>
@@ -684,8 +687,26 @@
     <string name="digital_clock_settings_summary">Impostazioni stile</string>
     <string name="event_service_settings_title">Eventi</string>
     <!-- QuickSettings Panel Transparency -->
+    <string name="quick_settings_category">Impostazioni rapide</string>
+    <string name="qs_panel_alpha_title">Opacità impostazioni rapide</string>
     <string name="qs_panel_alpha_summary">Imposta la trasparenza dello sfondo</string>
     <string name="splitscreen_force_systembar_enabled_title">Forza la visualizzazione delle barre di sistema nello schermo diviso</string>
+    <string name="gesture_settings_title">Gesti</string>
+    <string name="gesture_settings_info">La barra di navigazione deve essere disabilitata!\n\nGesti disponibili:\n\nIndietro\n- Scorri verso l\'alto sul lato destro o sinistro\n\nHome\n- Scorri verso l\'alto al centro\n\nApp recenti\n- Scorri verso l\'alto e mantieni\n\nPremi a lungo il tasto home\n- Scorri brevemente verso l\'alto e tieni premuto al centro</string>
+    <string name="use_bottom_gesture_title">Gesti di navigazione</string>
+    <string name="use_bottom_gesture_summary">Scorri verso l\'alto dalla parte inferiore dello schermo per navigare</string>
+    <string name="gesture_swipe_length_title">Lunghezza dell\'area di scorrimento</string>
+    <string name="unit_dpi">DPI</string>
+    <string name="unit_px">pixel</string>
+    <string name="header_category_omni">OmniGears</string>
+    <string name="omni_dashboard_summary">Personalizza il tuo dispositivo con Omni</string>
+    <string name="button_settings_title">Pulsanti</string>
+    <string name="columns_menu">Disposizione colonne</string>
+    <string name="hide_summary_menu">Nascondi riepilogo</string>
+    <string name="more_settings_title">Altro</string>
+    <string name="omni_device_parts">Funzioni del dispositivo</string>
+    <string name="style_settings_title">Stile</string>
+    <string name="style_settings_summary">Sfondi e altre chicche</string>
     <!-- StatusBar -->
     <!-- Display Manager -->
     <!-- Dialer Setting -->
