@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
 */
-package org.omnirom.omnigears.interfacesettings;
+package org.omnirom.omnigears;
 import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
@@ -37,13 +37,15 @@ import org.omnirom.omnilib.preference.SystemSettingSwitchPreference;
 import java.util.List;
 import java.util.ArrayList;
 
-public class LockscreenItemSettings extends SettingsPreferenceFragment implements
+public class DozeSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
-    private static final String TAG = "LockscreenItemSettings";
-    private static final String KEY_LOCKSCREEN_MEDIA_BLUR = "lockscreen_media_blur";
+    private static final String TAG = "DozeSettings";
+    private static final String KEY_PULSE_BRIGHTNESS = "ambient_pulse_brightness";
+    private static final String KEY_DOZE_BRIGHTNESS = "ambient_doze_brightness";
 
-    private SeekBarPreference mLockscreenMediaBlur;
+    private SeekBarPreference mPulseBrightness;
+    private SeekBarPreference mDozeBrightness;
 
     @Override
     public int getMetricsCategory() {
@@ -53,14 +55,27 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.lockscreenitems);
+        addPreferencesFromResource(R.xml.doze_settings);
 
-        int defaultBlur = 25;
-        mLockscreenMediaBlur = (SeekBarPreference) findPreference(KEY_LOCKSCREEN_MEDIA_BLUR);
+        int defaultDoze = getResources().getInteger(
+                com.android.internal.R.integer.config_screenBrightnessDoze);
+        int defaultPulse = getResources().getInteger(
+                com.android.internal.R.integer.config_screenBrightnessPulse);
+        if (defaultPulse == -1) {
+            defaultPulse = defaultDoze;
+        }
+
+        mPulseBrightness = (SeekBarPreference) findPreference(KEY_PULSE_BRIGHTNESS);
         int value = Settings.System.getInt(getContentResolver(),
-                Settings.System.OMNI_LOCKSCREEN_MEDIA_BLUR, defaultBlur);
-        mLockscreenMediaBlur.setValue(value);
-        mLockscreenMediaBlur.setOnPreferenceChangeListener(this);
+                Settings.System.OMNI_PULSE_BRIGHTNESS, defaultPulse);
+        mPulseBrightness.setValue(value);
+        mPulseBrightness.setOnPreferenceChangeListener(this);
+
+        mDozeBrightness = (SeekBarPreference) findPreference(KEY_DOZE_BRIGHTNESS);
+        value = Settings.System.getInt(getContentResolver(),
+                Settings.System.OMNI_DOZE_BRIGHTNESS, defaultDoze);
+        mDozeBrightness.setValue(value);
+        mDozeBrightness.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -70,10 +85,15 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mLockscreenMediaBlur) {
+        if (preference == mPulseBrightness) {
             int value = (Integer) newValue;
             Settings.System.putInt(getContentResolver(),
-                    Settings.System.OMNI_LOCKSCREEN_MEDIA_BLUR, value);
+                    Settings.System.OMNI_PULSE_BRIGHTNESS, value);
+            return true;
+        } else if (preference == mDozeBrightness) {
+            int value = (Integer) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.OMNI_DOZE_BRIGHTNESS, value);
             return true;
         }
         return true;
@@ -88,7 +108,7 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
                             new ArrayList<SearchIndexableResource>();
 
                     SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.lockscreenitems;
+                    sir.xmlResId = R.xml.doze_settings;
                     result.add(sir);
 
                     return result;

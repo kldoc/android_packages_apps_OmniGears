@@ -45,38 +45,6 @@
         android:defaultValue="false" />
 
     <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
-        android:key="doze_on_charge"
-        android:title="@string/doze_on_charge_title"
-        android:summary="@string/doze_on_charge_summary"
-        android:defaultValue="false" />
-
-    <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
-        android:key="pulse_ambient_light"
-        android:title="@string/pulse_ambient_light_title"
-        android:summary="@string/pulse_ambient_light_summary"
-        android:defaultValue="false" />
-    <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
-        android:key="ambient_notification_light_enabled"
-        android:title="@string/ambient_notification_light_enabled_title"
-        android:summary="@string/ambient_notification_light_enabled_sumary"
-        android:defaultValue="false" />
-    <org.omnirom.omnilib.preference.SeekBarPreference
-        android:key="ambient_doze_brightness"
-        android:title="@string/ambient_doze_brightness_title"
-        android:summary="@string/ambient_doze_brightness_summary"
-        android:max="255"
-        settings:min="1"
-        android:persistent="false" />
-
-    <org.omnirom.omnilib.preference.SeekBarPreference
-        android:key="ambient_pulse_brightness"
-        android:title="@string/ambient_pulse_brightness_title"
-        android:summary="@string/ambient_pulse_brightness_summary"
-        android:max="255"
-        settings:min="1"
-        android:persistent="false" />
-
-    <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
         android:key="lockscreen_hide_media"
         android:title="@string/lockscreen_hide_media_title"
         android:summary="@string/lockscreen_hide_media_summary"

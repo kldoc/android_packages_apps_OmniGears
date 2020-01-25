@@ -49,6 +49,12 @@
         android:fragment="org.omnirom.omnigears.interfacesettings.LockscreenItemSettings" />
 
     <Preference
+        android:key="doze_settings"
+        android:title="@string/doze_settings_title"
+        android:icon="@drawable/ic_homepage_doze"
+        android:fragment="org.omnirom.omnigears.DozeSettings" />
+
+    <Preference
         android:key="led_settings"
         android:title="@string/batterylight_title"
         android:icon="@drawable/ic_homepage_led"

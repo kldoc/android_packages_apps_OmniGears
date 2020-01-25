@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2018 The OmniROM Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/doze_settings_title"
+    android:key="doze_settings">
+
+    <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
+        android:key="doze_on_charge"
+        android:title="@string/doze_on_charge_title"
+        android:summary="@string/doze_on_charge_summary"
+        android:defaultValue="false" />
+
+    <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
+        android:key="pulse_ambient_light"
+        android:title="@string/pulse_ambient_light_title"
+        android:summary="@string/pulse_ambient_light_summary"
+        android:defaultValue="false" />
+
+    <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
+        android:key="ambient_notification_light_enabled"
+        android:title="@string/ambient_notification_light_enabled_title"
+        android:summary="@string/ambient_notification_light_enabled_sumary"
+        android:defaultValue="false" />
+
+    <org.omnirom.omnilib.preference.SeekBarPreference
+        android:key="ambient_doze_brightness"
+        android:title="@string/ambient_doze_brightness_title"
+        android:summary="@string/ambient_doze_brightness_summary"
+        android:max="255"
+        settings:min="1"
+        android:persistent="false" />
+
+    <org.omnirom.omnilib.preference.SeekBarPreference
+        android:key="ambient_pulse_brightness"
+        android:title="@string/ambient_pulse_brightness_title"
+        android:summary="@string/ambient_pulse_brightness_summary"
+        android:max="255"
+        settings:min="1"
+        android:persistent="false" />
+
+</PreferenceScreen>
+
