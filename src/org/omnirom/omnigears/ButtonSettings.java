@@ -93,7 +93,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 //        mEnableNavBar = (SwitchPreference) prefScreen.findPreference(KEYS_SHOW_NAVBAR_KEY);
         mButtonLight = prefScreen.findPreference(KEY_BUTTON_LIGHT);
 
-        if (!buttonLights || deviceKeys == 0) {
+        if (deviceKeys == 0) {
+            prefScreen.removePreference(keysCategory);
+        } else if (!buttonLights) {
             keysCategory.removePreference(mButtonLight);
         }
 
