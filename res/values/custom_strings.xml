@@ -854,10 +854,18 @@
     <string name="show_rotation_suggestions_title">Show rotation suggestions</string>
     <string name="show_rotation_suggestions_summary">In locked rotation mode</string>
 
-    <string name="pulse_ambient_light_title">Pulse light notification</string>
-    <string name="pulse_ambient_light_summary">Show light bar on notification pulse</string>
+    <string name="pulse_ambient_light_title">Pulse on new notifcation</string>
+    <string name="pulse_ambient_light_summary">Show light bar on new notification</string>
 
-    <string name="ambient_notification_light_enabled_title">Always on ambient lights on notification</string>
-    <string name="ambient_notification_light_enabled_sumary">Show Always On light bars when receiving a notification</string>
+    <string name="ambient_notification_light_enabled_title">Pulse on always on</string>
+    <string name="ambient_notification_light_enabled_sumary">Show light bar on new notification with always on</string>
 
+    <string name="pulse_ambient_light_note">Wake screen on receiving new notifications must be turned on</string>
+    <string name="ambient_brigthness_category_title">Screen brightness</string>
+    <string name="pulse_ambient_category_title">Notification pulse</string>
+
+    <string name="ambient_notification_light_hide_aod_title">Always on ambient lights hide aod</string>
+    <string name="ambient_notification_light_hide_aod_sumary">When Always On light bars are enabled will hide other aod content</string>
+    <string name="ambient_notification_light_accent_title">Use accent color for whatever</string>
+    <string name="ambient_notification_light_accent_sumary">Follow system accent color instead of the default color</string>
 </resources>
