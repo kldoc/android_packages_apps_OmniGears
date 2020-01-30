@@ -225,8 +225,6 @@
     <string name="keys_action_recents">Recents</string>
     <string name="keys_action_assist">Launch assist</string>
 
-    <string name="doze_brightness_level_title">Brightness level</string>
-
     <!-- Lock screen config -->
     <string name="lockscreen_shortcut_title">Shortcuts</string>
     <string name="lockscreen_voice_shortcut_title">Voice assist shortcut</string>
@@ -833,14 +831,14 @@
     <string name="fingerprint_category_custom_icon">Custom icon</string>
     <string name="fingerprint_custom_icon_select">Select a custom file</string>
 
-    <string name="ambient_pulse_brightness_title">Ambient notification brightness</string>
-    <string name="ambient_pulse_brightness_summary">Set brightness to use when notifcations are shown</string>
+    <string name="ambient_pulse_brightness_title">Notification brightness</string>
+    <string name="ambient_pulse_brightness_summary">Set brightness to use when showing new notifcations</string>
 
-    <string name="ambient_doze_brightness_title">Ambient display brightness</string>
-    <string name="ambient_doze_brightness_summary">Set brightness to use during ambient display on</string>
+    <string name="ambient_doze_brightness_title">Always on brightness</string>
+    <string name="ambient_doze_brightness_summary">Set brightness to use during always on</string>
 
     <!-- doze on charge -->
-    <string name="doze_on_charge_title">Show ambient display when charging</string>
+    <string name="doze_on_charge_title">Show always on when charging</string>
     <string name="doze_on_charge_summary">Wake screen when charging</string>
     <!-- lock screen media blur -->
     <string name="lockscreen_media_blur_title">Media artwork blur level</string>
@@ -854,18 +852,18 @@
     <string name="show_rotation_suggestions_title">Show rotation suggestions</string>
     <string name="show_rotation_suggestions_summary">In locked rotation mode</string>
 
-    <string name="pulse_ambient_light_title">Pulse on new notifcation</string>
-    <string name="pulse_ambient_light_summary">Show light bar on new notification</string>
+    <string name="pulse_ambient_light_title">Show on new notifcation</string>
+    <string name="pulse_ambient_light_summary">Show light pulse on new notification</string>
 
-    <string name="ambient_notification_light_enabled_title">Pulse on always on</string>
-    <string name="ambient_notification_light_enabled_sumary">Show light bar on new notification with always on</string>
+    <string name="ambient_notification_light_enabled_title">Show on always on</string>
+    <string name="ambient_notification_light_enabled_sumary">Show light pulse on new notification using always on</string>
 
     <string name="pulse_ambient_light_note">Wake screen on receiving new notifications must be turned on</string>
     <string name="ambient_brigthness_category_title">Screen brightness</string>
-    <string name="pulse_ambient_category_title">Notification pulse</string>
+    <string name="pulse_ambient_category_title">Notification light pulse</string>
 
-    <string name="ambient_notification_light_hide_aod_title">Always on ambient lights hide aod</string>
-    <string name="ambient_notification_light_hide_aod_sumary">When Always On light bars are enabled will hide other aod content</string>
-    <string name="ambient_notification_light_accent_title">Use accent color for whatever</string>
-    <string name="ambient_notification_light_accent_sumary">Follow system accent color instead of the default color</string>
+    <string name="ambient_notification_light_hide_aod_title">Only show light pulse</string>
+    <string name="ambient_notification_light_hide_aod_sumary">Hide all other display elements from always on</string>
+    <string name="ambient_notification_light_accent_title">Use system accent color</string>
+    <string name="ambient_notification_light_accent_sumary">Use current system accent color for light pulse</string>
 </resources>
