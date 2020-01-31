@@ -19,7 +19,7 @@ package org.omnirom.omnigears.interfacesettings;
 import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
+// import android.content.res.Resources;
 import androidx.preference.Preference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
@@ -55,10 +55,9 @@ public class LockscreenItemSettings extends SettingsPreferenceFragment implement
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.lockscreenitems);
 
-        int defaultBlur = 25;
         mLockscreenMediaBlur = (SeekBarPreference) findPreference(KEY_LOCKSCREEN_MEDIA_BLUR);
-        int value = Settings.System.getInt(getContentResolver(),
-                Settings.System.OMNI_LOCKSCREEN_MEDIA_BLUR, defaultBlur);
+        int value = Math.min(Settings.System.getInt(getContentResolver(),
+                Settings.System.OMNI_LOCKSCREEN_MEDIA_BLUR, 12), 25);
         mLockscreenMediaBlur.setValue(value);
         mLockscreenMediaBlur.setOnPreferenceChangeListener(this);
     }
